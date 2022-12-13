@@ -1,0 +1,82 @@
+body{
+    font-family: 'Baloo Tamma 2', cursive;
+}
+#header{
+    background: linear-gradient(to right,rgb(111, 140, 170),rgb(123, 123, 250));
+
+}
+#header img{
+    width: 150px;
+    left: 20px;
+}
+#header ul li a{
+    font-size: 18px;
+    font-weight: bolder;
+    color: rgb(236, 230, 230);
+    transition-property: color;
+    transition-duration: 1s;
+}
+#header ul li a:hover{
+    color: white;
+}
+
+
+#header ul li .login:hover{
+color:green;
+}
+
+#header .bi{
+    color: white;
+}
+#header .navbar-toggler{
+    border: 1px solid white;
+}
+#header .navbar-toggler:focus{
+    box-shadow: none;
+}
+#banner{
+    background: linear-gradient(to right,rgb(111, 140, 170),rgb(123, 123, 250));
+    padding-bottom: 10px;
+}
+#banner #img1{
+    width: 150px;
+    border-radius: 200px;
+}
+#testi{
+    /* background-color: greenyellow; */
+    margin: 6px 0px;
+}
+#testi h4{
+    font-size: 30px;
+    font-weight: lighter;
+    text-transform:capitalize ;
+}
+#testi img{
+    width: 100px;
+    border-radius: 50%;
+}
+#footer{
+    background: linear-gradient(to right,rgb(111, 140, 170),rgb(123, 123, 250));
+    padding: 15px;
+}
+#footer img{
+    width: 30px;
+    
+}
+#footer #footer-img{
+    width: 100px;
+    border-radius: 50%;
+}
+#footer h3{
+    color: white;
+}
+#footer .bi{
+    color: white;
+    font-size: 25px;
+}
+#footer #arrow{
+     position: fixed;
+     bottom: 0px;
+     right: 10px;
+
+}

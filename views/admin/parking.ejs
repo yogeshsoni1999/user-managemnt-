@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashbard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/admin/style.css">
+</head>
+<body>
+    <%-include('../../partials/admin/header.ejs');%>
+   
+    <section id="left">
+        <div class="container">
+            <div class="row">
+                <%-include('../../partials/admin/left.ejs');%>
+                <div class="col-md-9">
+                    <h2 class="text-center text-primary">Parking Management</h2>
+                    <!-- --------------------searchbar for search vechile by receipt------------------------ -->
+
+                    <form action="/admin/receipt" method="post">
+                        <input type="search" name="receipt" id="search" placeholder="Search By Receipt no.">
+                        <button type="submit" class="btn-info mb-3"><i class="bi bi-search"></i></button>
+                    </form>
+
+                    <div><a href="/admin/parkinginsert"><button class="btn btn-primary form-control mt-4">Add New Parking Record</button></a></div>
+
+                    <table class="table table-bordered border-primary mt-3">
+                        <tr>
+                            <th>S.No.</th>
+                            <th>Vehicle No.</th>
+                            <th>Vehicle Type</th>
+                            <th>Receipt No.</th>
+                            <th>In Time</th>
+                            <th>Out Time</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Print Receipt</th>
+                        </tr>
+                        <%parkingRecord.forEach((result,key)=>{%>
+                            <tr>
+                                <td><%=key+1%></td>
+                                <td><%=result.vno%></td>
+                                <td><%=result.vtype%></td>
+                                <td><%=result.receipt%></td>
+                                <td><%=result.vin%></td>
+                                <td><%=result.vout%></td>
+                                <td><%=result.amount%></td>
+                                <%if(result.status=='IN'){%>
+                                <td><a href="/admin/parkingupdate/<%=result.id%>"><button class="btn btn-success"><%=result.status%></button></a></td>
+                                <%}else{%>
+                                <td><a href="/admin/parkingupdate/<%=result.id%>"><button class="btn btn-success" disabled><%=result.status%></button></a></td>
+                                <%}%>
+                                <td><a href="/admin/printout/<%=result.id%>"><i class="bi bi-printer"></i></a></td>
+                            </tr>
+                        <%})%>
+                       
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </section>
+   
+
+   
+
+   <%- include('../../partials/admin/footer.ejs')%>
+</body>
+</html>

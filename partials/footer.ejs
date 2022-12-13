@@ -1,0 +1,48 @@
+<section id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="media/rail.jpg" alt="" id="footer-img">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam facere unde quos alias hic accusamus blanditiis pariatur, tempora ab qui soluta ipsum voluptatibus, possimus nam maxime, culpa modi minus nostrum.</p>
+            </div>
+            <div class="col-md-4">
+                <h3><%=addressrecord.companyname%></h3>
+                <p><i class="bi bi-geo-alt"></i>
+                    <%=addressrecord.address%>
+                </p>
+                <p><i class="bi bi-phone"></i><%=addressrecord.mobile%></p>
+                <p><i class="bi bi-telephone"></i><%=addressrecord.tel%></p>
+            </div>
+            <div class="col-md-4">
+                <h3>Query Form</h3>
+                <form action="/contactrecord" method="post">
+                    <div class="form-floating">
+                        <input type="Email" name="email" placeholder="Email Address " class="form-control">
+                        <label for="">Email Address</label>
+                    </div>
+                    <textarea name="query" id="" cols="10" rows="8" placeholder="Enter Your Query"
+                        class="form-control mt-3"></textarea>
+                        <button class="form-control mt-2 btn-success">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-12">
+                <a href="http://instagram.com"><img src="media/instagram.jpg" alt=""></a>
+                <a href="http://facebook.com"><img src="media/facebook.png" alt=""></a>
+                <a href="http://twitter.com"> <img src="media/twitter.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row text-end">
+            <div class="col-md-12">
+                <a href=""><i class="bi bi-arrow-up-circle" id="arrow"></i></a>
+            </div>
+        </div>
+    </div>
+
+</section>

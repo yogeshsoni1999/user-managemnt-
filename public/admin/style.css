@@ -1,0 +1,26 @@
+#adminlogin{
+    position: relative;
+    margin-top: 200px;
+    left: 260px;
+}
+#header{
+    /* background-color: blue; */
+    background: linear-gradient(to right,rgb(33, 194, 235),rgb(199, 213, 231));
+    padding: 15px 0px;
+}
+#header button{
+    float: right;
+}
+#header button a{
+    text-decoration: none;
+    color: white;
+}
+#header  h2{
+    color: white;
+}
+#mid table{
+    border: 1px solid blue;
+}
+#mid table th{
+    text-align: center;
+}

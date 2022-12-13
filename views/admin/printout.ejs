@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>printout</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="div container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Parking Receipt</h2>
+            </div>
+        </div>
+    </div>
+    <div class="div container">
+        <div class="row">
+            <div class="col-md-3"><h4>Vehicle Number: <%=printoutrecord.vno%></h4><div>
+            <div class="col-md-3"><h4>In Time: <%=printoutrecord.vin%></h4></div>
+            <div class="col-md-3"><h4>Out Time: <%=printoutrecord.vout%></h4></div>
+            <div class="col-md-3"><h3>Amount: <%=printoutrecord.amount%></h3></div>
+        </div>
+    </div>
+
+    <script>
+
+        function handleprint(){
+            window.print()  //it is a javascript function for print
+        }
+        handleprint();
+    </script>
+</body>
+</html>

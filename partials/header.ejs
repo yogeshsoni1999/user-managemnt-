@@ -1,0 +1,58 @@
+<section id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="/"><img src="media/railway.jpg" alt=""></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="bi bi-list"></i>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                             <!--here ms-auto move content left to right and me-auto move right to left-->
+                            <ul class="navbar-nav ms-auto mb-3">
+                                <%if(username!=='hello'){%>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#footer">Contact us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/testi">Testinorminals</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/gallery">Gallery</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Welcome  <%=username%></a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/changepassword">Change Password</a>
+                                </li>
+                                
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/logout">Logout</a>
+                                </li>
+                                <%}else{%>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/registration">Registration</a>
+                                    </li>
+                                    <%}%>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
